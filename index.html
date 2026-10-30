@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f7f2">
+  <title>airmark. | Your delivery, verified.</title>
+  <meta name="description" content="A clearer picture of every drone delivery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="flight.css">
+  <link rel="stylesheet" href="cinematic.css">
+  <style>html { overflow-x: clip; }</style>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js" defer></script>
+  <script src="flight.js" defer></script>
+</head>
+<body>
+  <div class="announcement"><span class="announcement-dot"></span> A LITTLE MORE CERTAINTY, DELIVERED. <span class="announcement-right">DRONE DELIVERY RECEIPT <span>↗</span></span></div>
+  <header class="site-header">
+    <a class="brand" href="#receipt" aria-label="Airmark home"><span class="brand-icon"><i></i><i></i><i></i><i></i></span>airmark<span class="brand-period">.</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#receipt" data-nav="receipt">Your receipt</a>
+      <a href="#details" data-nav="details">Delivery details</a>
+      <a href="#report" data-nav="report">Get help</a>
+    </nav>
+    <div class="header-right"><span class="header-live"><span></span> DELIVERY COMPLETE</span><button class="menu-toggle icon-button" aria-label="Open menu" aria-expanded="false"><i data-lucide="menu"></i></button><button class="help-button" data-go="report">Need help? <i data-lucide="arrow-up-right"></i></button></div>
+  </header>
+  <nav class="mobile-nav" aria-label="Mobile navigation" hidden><a href="#receipt">Your receipt</a><a href="#details">Delivery details</a><a href="#report">Get help</a></nav>
+
+  <main>
+    <section class="view" id="receipt-view" aria-labelledby="receipt-title">
+      <div class="cinema-hero">
+        <video class="cinema-image cinema-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/15570187/aerial-aerial-footage-aerial-image-aerial-photo-15570187.jpeg?auto=compress&fit=crop&w=1800" aria-hidden="true"><source src="https://videos.pexels.com/video-files/15570187/15570187-hd_1280_720_60fps.mp4" type="video/mp4"></video>
+        <div class="cinema-shade"></div>
+        <div class="cinema-content"><div class="cinema-kicker"><span></span> DELIVERY COMPLETE / AM-2048-91</div><h1>AIRMARK<span>.</span></h1><p>A little more certainty,<br>delivered.</p><button class="cinema-button" data-scroll-receipt>See your delivery <i data-lucide="arrow-down-right"></i></button></div>
+        <div class="cinema-meta"><span>DELIVERED TO <strong>128 Willow Lane</strong></span><span>TOUCHDOWN <strong>2:36 PM</strong></span><span class="cinema-scroll">YOUR RECEIPT <i data-lucide="arrow-down"></i></span></div>
+      </div>
+      <section class="flight-story" id="flight-story" aria-label="Your delivery journey">
+        <div class="flight-stage">
+          <canvas id="flight-canvas" aria-hidden="true"></canvas>
+          <div class="flight-topline"><span>THE DELIVERY JOURNEY</span><span>AIRMARK / 01—03</span></div>
+          <div class="flight-copy">
+            <div class="flight-chapter is-active" data-flight-chapter="0"><div class="flight-kicker"><span></span> 01 / IN FLIGHT</div><h2>GOOD THINGS<br>ARE <em>ON THEIR WAY.</em></h2><p>From above the neighborhood to your doorstep, your package is on the move.</p></div>
+            <div class="flight-chapter" data-flight-chapter="1" aria-hidden="true"><div class="flight-kicker"><span></span> 02 / THE APPROACH</div><h2>THE LAST<br><em>FEW FEET.</em></h2><p>Every delivery has a designated spot. Yours is right where you asked for it.</p></div>
+            <div class="flight-chapter" data-flight-chapter="2" aria-hidden="true"><div class="flight-kicker"><span></span> 03 / TOUCHDOWN</div><h2>RIGHT WHERE<br>IT <em>BELONGS.</em></h2><p>Your package has landed. Take a closer look at your delivery receipt.</p><button class="flight-receipt-link" data-scroll-receipt>See your receipt <i data-lucide="arrow-up-right"></i></button></div>
+          </div>
+          <div class="flight-bottom"><div class="flight-progress"><span id="flight-step">01 / IN FLIGHT</span><div class="progress-track"><span id="flight-progress-bar"></span></div><span>DELIVERY COMPLETE</span></div><div class="flight-index">THE LAST<br><strong>50 FT<span>.</span></strong></div></div>
+        </div>
+      </section>
+      <div class="page-wrap">
+        <div class="breadcrumb" id="delivery-receipt"><span>YOUR DELIVERY RECEIPT</span><span class="breadcrumb-line"></span><span>NO. AM-2048-91</span></div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-icon"><i data-lucide="check"></i></span> DELIVERY CONFIRMED <span class="eyebrow-divider">/</span> OCT 24, 2026</div>
+            <h1 id="receipt-title">Your delivery,<br><em>verified.</em><span class="title-spark">✳</span></h1>
+            <p class="hero-description">From the sky to your doorstep. Here's the proof your package made it to the right place.</p>
+            <div class="address-block"><div class="address-icon"><i data-lucide="map-pin"></i></div><div><span class="micro-label">DELIVERED TO</span><strong>128 Willow Lane</strong><span>San Francisco, CA 94110</span></div><span class="address-check"><i data-lucide="check"></i></span></div>
+            <div class="hero-actions"><button class="button button-dark" data-go="details">View delivery proof <i data-lucide="arrow-up-right"></i></button><a class="text-link" href="#report">Can't find it? <i data-lucide="arrow-right"></i></a></div>
+            <div class="hero-footnote"><span class="avatar-stack"><span>✦</span><span><i data-lucide="check"></i></span></span><span>One less thing to worry about.<br><strong>That's the airmark promise.</strong></span></div>
+          </div>
+          <div class="map-panel" aria-label="Satellite view of the delivery location">
+            <div class="map-image"></div><div class="map-overlay"></div><div class="map-grid"></div>
+            <div class="map-top"><span><i data-lucide="scan-line"></i> DROP ZONE / 01</span><span class="map-live"><span></span> LOCATION VERIFIED</span></div>
+            <div class="map-target"><div class="target-ring ring-one"></div><div class="target-ring ring-two"></div><div class="target-ring ring-three"></div><div class="target-pin"><i data-lucide="package-check"></i></div><div class="target-label"><span>✓</span> YOUR DROP SPOT</div></div>
+            <div class="map-coordinate">37°45'39.2"N<br>122°25'11.8"W</div>
+            <div class="map-bottom"><div><span class="map-small">TOUCHDOWN CONFIRMED</span><strong>Right where it belongs<span>.</span></strong></div><div class="map-arrow"><i data-lucide="move-up-right"></i></div></div>
+            <div class="map-corner map-corner-tl"></div><div class="map-corner map-corner-tr"></div><div class="map-corner map-corner-bl"></div><div class="map-corner map-corner-br"></div>
+          </div>
+        </div>
+        <div class="receipt-strip"><div class="strip-heading"><span class="strip-number">01 / THE HANDOFF</span><strong>The details make<br>the difference<span>.</span></strong></div><div class="strip-item"><span class="strip-icon"><i data-lucide="clock-3"></i></span><div><span class="micro-label">DELIVERED AT</span><strong>2:36 PM</strong><small>Saturday, October 24</small></div></div><div class="strip-item"><span class="strip-icon"><i data-lucide="crosshair"></i></span><div><span class="micro-label">LOCATION MATCH</span><strong>Within 3 ft</strong><small>Of your designated spot</small></div></div><div class="strip-item"><span class="strip-icon"><i data-lucide="camera"></i></span><div><span class="micro-label">PHOTO PROOF</span><strong>Captured</strong><small>Ready for you to review</small></div></div><button class="strip-button" data-go="details" aria-label="View delivery details"><i data-lucide="arrow-up-right"></i></button></div>
+        <div class="below-intro"><span>BUILT FOR PEACE OF MIND</span><p>A delivery should never leave you guessing<span>.</span></p><span>GOOD FROM ABOVE. GOOD ON THE GROUND. ↗</span></div>
+      </div>
+    </section>
+
+    <section class="view" id="details-view" aria-labelledby="details-title" hidden>
+      <div class="page-wrap inner-page"><button class="back-link" data-go="receipt"><i data-lucide="arrow-left"></i> Back to receipt</button><div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-icon"><i data-lucide="check"></i></span> THE FULL PICTURE <span class="eyebrow-divider">/</span> AM-2048-91</div><h1 id="details-title">The proof is<br><em>in the details.</em><span class="title-spark">✳</span></h1><p>Everything we know about your delivery, all in one place.</p></div><div class="heading-stamp"><span>✓</span> VERIFIED<br>DELIVERY <small>24 OCT 2026</small></div></div>
+        <div class="details-grid"><div class="proof-photo"><img src="https://images.unsplash.com/photo-1766234538697-6b33f97ed86a?auto=format&fit=crop&w=1400&q=85" alt="Illustrative photograph of a package on a doorstep"><div class="photo-tag"><i data-lucide="camera"></i> SAMPLE DELIVERY PHOTO <span>02:36 PM</span></div><div class="photo-caption"><span>01 / PHOTO EVIDENCE</span><strong>A little snapshot<br>of a safe landing<span>.</span></strong></div></div><div class="proof-info"><div class="section-kicker">02 / DELIVERY RECORD <i data-lucide="arrow-up-right"></i></div><h2>Every detail,<br>accounted for<span>.</span></h2><p>Your package was delivered to the designated location and a photo was captured at drop-off.</p><div class="detail-list"><div><span>Delivery status</span><strong><span class="green-dot"></span> Delivered</strong></div><div><span>Delivery date</span><strong>Oct 24, 2026</strong></div><div><span>Drop-off time</span><strong>2:36 PM</strong></div><div><span>Delivery location</span><strong>128 Willow Lane</strong></div><div><span>Location accuracy</span><strong>Within 3 ft</strong></div><div><span>Receipt number</span><strong>AM-2048-91</strong></div></div><div class="proof-note"><i data-lucide="shield-check"></i><span><strong>Location checked.</strong> The drop-off coordinates match your designated delivery spot.</span></div></div></div>
+        <div class="details-footer"><div><span class="micro-label">SOMETHING NOT QUITE RIGHT?</span><strong>We're here to help you find it.</strong></div><button class="button button-dark" data-go="report">Report a missing package <i data-lucide="arrow-up-right"></i></button></div>
+      </div>
+    </section>
+
+    <section class="view" id="report-view" aria-labelledby="report-title" hidden>
+      <div class="page-wrap inner-page"><button class="back-link" data-go="receipt"><i data-lucide="arrow-left"></i> Back to receipt</button><div class="report-layout"><div class="report-intro"><div class="eyebrow"><span class="eyebrow-icon dark-icon"><i data-lucide="heart-handshake"></i></span> WE'RE ON YOUR SIDE</div><h1 id="report-title">Let's find<br>your <em>package.</em><span class="title-spark">✳</span></h1><p>It happens. Tell us a little more and we'll help you figure out what comes next.</p><div class="report-side-note"><span>BEFORE YOU REPORT</span><strong>A quick look around?</strong><p>Check your designated drop spot and ask anyone at home or nearby. Sometimes a package is closer than you think.</p><a href="#details">Review delivery proof <i data-lucide="arrow-right"></i></a></div><div class="report-decoration">✳</div></div><div class="report-card"><div id="report-form-wrap"><div class="form-top"><div><span class="section-kicker">03 / GET SUPPORT</span><h2>Report an issue<span>.</span></h2><p>We'll use these details to create your report.</p></div><span class="form-symbol"><i data-lucide="package-search"></i></span></div><form id="report-form"><label for="tracking">Receipt number</label><input id="tracking" name="tracking" value="AM-2048-91" required><label for="issue">What seems to be the issue?</label><select id="issue" name="issue" required><option value="" disabled selected>Select an issue</option><option>My package is missing</option><option>Delivered to the wrong location</option><option>My package was damaged</option><option>Something else</option></select><label for="email">Your email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required><label for="description">Anything else we should know? <span>OPTIONAL</span></label><textarea id="description" name="description" rows="3" placeholder="Share any details that might help..."></textarea><button class="button button-dark form-submit" type="submit">Submit report <i data-lucide="arrow-up-right"></i></button><p class="form-disclaimer"><i data-lucide="info"></i> Demo only. Reports are saved in this browser and are not sent to a support team.</p></form></div><div class="success-state" id="report-success" hidden><div class="success-icon"><i data-lucide="check"></i></div><span class="section-kicker">REPORT RECORDED</span><h2>We've got<br>the details<span>.</span></h2><p>Your demo report has been saved in this browser. No message has been sent to a support team.</p><div class="case-number"><span>YOUR DEMO REFERENCE</span><strong id="case-number"></strong></div><button class="button button-dark" data-go="receipt">Back to your receipt <i data-lucide="arrow-right"></i></button><button class="text-link reset-report" type="button">Create another report <i data-lucide="arrow-right"></i></button></div></div></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div><a class="brand footer-brand" href="#receipt"><span class="brand-icon"><i></i><i></i><i></i><i></i></span>airmark<span class="brand-period">.</span></a><span>DELIVERED WITH A LITTLE MORE CARE.</span></div><span>© 2026 AIRMARK &nbsp; / &nbsp; A CONCEPT FOR BETTER DELIVERIES</span></footer>
+</body>
+</html>
