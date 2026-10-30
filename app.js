@@ -71,7 +71,7 @@ const revealObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) entry.target.classList.add('is-visible');
   });
 }, { threshold: 0.15 });
-document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+document.querySelectorAll('.reveal, .hero-copy, .map-panel, .receipt-strip, .page-heading, .details-grid, .report-layout').forEach((element) => revealObserver.observe(element));
 const heroVideo = document.querySelector('.cinema-video');
 const videoObserver = new IntersectionObserver((entries) => {
   if (entries[0].isIntersecting && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

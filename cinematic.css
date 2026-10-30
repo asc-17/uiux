@@ -95,3 +95,15 @@ body[data-view="receipt"] .help-button:hover{background:var(--yellow)}
 @media(max-width:800px){.flight-story{height:280vh;min-height:1600px}.flight-stage:after{background:linear-gradient(180deg,rgba(232,238,232,.97) 0%,rgba(232,238,232,.85) 30%,transparent 57%)}#flight-canvas{top:29%;right:0;width:100%;height:62%}.flight-copy{top:28%;left:6%;width:88%;max-width:none}.flight-copy h2{font-size:52px;margin:15px 0}.flight-copy p{font-size:14px;max-width:320px}.flight-bottom{bottom:26px}.flight-topline{top:26px}}
 @media(max-width:480px){.flight-copy h2{font-size:42px}.flight-copy{top:27%}.flight-copy p{max-width:280px}.flight-receipt-link{padding:13px 18px;margin-top:8px}.flight-index{display:none}.flight-progress{max-width:none;width:100%}}
 @media(prefers-reduced-motion:reduce){.flight-story{height:auto;min-height:0}.flight-stage{position:relative;height:auto;min-height:0;padding:100px 6% 40px}.flight-stage:after,#flight-canvas,.flight-bottom{display:none}.flight-copy{position:relative;top:auto;left:auto;width:100%;max-width:none;transform:none}.flight-chapter,.flight-chapter.is-active{position:relative;top:auto;opacity:1;visibility:visible;transform:none;transition:none;margin-bottom:48px}.flight-chapter:last-child{margin-bottom:0}}
+
+@media(prefers-reduced-motion:no-preference){
+	.cinema-content>*{animation:airmark-rise .75s cubic-bezier(.22,1,.36,1) both}
+	.cinema-content h1{animation-delay:.1s}
+	.cinema-content p{animation-delay:.2s}
+	.cinema-content .cinema-button{animation-delay:.3s}
+	.cinema-meta{animation:airmark-rise .8s .4s both}
+	:is(.hero-copy,.map-panel,.receipt-strip,.page-heading,.details-grid,.report-layout).is-visible{animation:airmark-rise .8s cubic-bezier(.22,1,.36,1) both}
+	.map-panel.is-visible{animation-delay:.12s}
+	#report-success:not([hidden]){animation:airmark-rise .6s cubic-bezier(.22,1,.36,1) both}
+	@keyframes airmark-rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+}
